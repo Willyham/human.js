@@ -1,18 +1,19 @@
+'use strict';
+
 var fs = require('fs');
 var _ = require('underscore');
 var esprima = require('esprima');
 var traverse = require('traverse');
 
-var RuleFactory = require('./rules');
+var ruleFactory = require('./rules');
 var QuirksRule = require('./rules/quirks');
 
 // RULES
 var fatalRules = [];
 var warningRules = [QuirksRule];
-var rules = RuleFactory(fatalRules, warningRules);
+var rules = ruleFactory(fatalRules, warningRules);
 
 var Human = (function(){
-  "use strict";
 
   var _human = function(options){
     options = options || {};

@@ -1,3 +1,5 @@
+'use strict';
+
 var _ = require('underscore');
 var Rule = require('./rule');
 
@@ -29,7 +31,7 @@ var QuirksRule = Rule.extend({
     if(node.operator !== '+'){
       return true;
     }
-    if(node.argument.type !== "NewExpression"){
+    if(node.argument.type !== 'NewExpression'){
       return true;
     }
     return false;

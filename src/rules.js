@@ -1,7 +1,9 @@
+'use strict';
+
 var _ = require('underscore');
 
-var _instantiate = function(rule, options){
-  return new rule(options);
+var _instantiate = function(Rule, options){
+  return new Rule(options);
 };
 var _makeFatalRule = _.partial(_instantiate, _, {level: 'fatal'});
 var _makeWarningRule = _.partial(_instantiate, _, {level: 'warning'});
