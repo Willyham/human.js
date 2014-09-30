@@ -10,10 +10,11 @@ var ConsoleReporter = require('./reporters/console');
 var ruleFactory = require('./rules');
 var QuirksRule = require('./rules/quirks');
 var ElseRule = require('./rules/else');
+var AnonymousRule = require('./rules/anonymous');
 
 // RULES
 var fatalRules = [];
-var warningRules = [QuirksRule, ElseRule];
+var warningRules = [QuirksRule, ElseRule, AnonymousRule];
 var rules = ruleFactory(fatalRules, warningRules);
 
 // REPORTER
