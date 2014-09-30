@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "preferGlobal": true,
+  "bin": {
+    "human": "bin/human"
+  },
   "author": "Will Demaine",
   "license": "BSD-2-Clause",
   "dependencies": {

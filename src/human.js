@@ -30,6 +30,9 @@ var Human = (function(){
     var code = esprima.parse(content, {loc: true});
     traverse(code).forEach(function(node){
       _.each(rules, function(rule){
+        if(!node){
+          return;
+        }
         if(rule.test(node)){
           return;
         }
