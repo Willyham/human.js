@@ -7,8 +7,8 @@ var RuleFactory = require('./rules');
 var QuirksRule = require('./rules/quirks');
 
 // RULES
-var fatalRules = [QuirksRule];
-var warningRules = [];
+var fatalRules = [];
+var warningRules = [QuirksRule];
 var rules = RuleFactory(fatalRules, warningRules);
 
 var Human = (function(){
@@ -27,13 +27,14 @@ var Human = (function(){
   };
 
   _human.prototype.analyseContent = function(content){
-    var code = esprima.parse(content);
+    var code = esprima.parse(content, {loc: true});
     traverse(code).forEach(function(node){
       _.each(rules, function(rule){
         if(rule.test(node)){
           return;
         }
-        console.log('Rule failed!', rule);
+        console.log('Rule failed!', rule.getDescription());
+        console.log('At line ' + node.loc.start.line + ' column ' + node.loc.start.column);
         if(rule.getLevel() === 'fatal'){
           throw new Error('failed');
         }

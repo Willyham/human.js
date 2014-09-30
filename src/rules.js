@@ -1,7 +1,6 @@
 var _ = require('underscore');
 
 var _instantiate = function(rule, options){
-  debugger;
   return new rule(options);
 };
 var _makeFatalRule = _.partial(_instantiate, _, {level: 'fatal'});
