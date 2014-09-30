@@ -1,0 +1,19 @@
+{
+  "name": "human.js",
+  "version": "0.0.0",
+  "description": "Analysis tool for human readable code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Demaine",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "esprima": "~1.2.2",
+    "underscore": "~1.7.0",
+    "glob": "~4.0.6",
+    "minimist": "~1.1.0",
+    "traverse": "~0.6.6",
+    "class-extend": "~0.1.1"
+  }
+}
