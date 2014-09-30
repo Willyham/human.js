@@ -9,6 +9,12 @@ var QuirksRule = Rule.extend({
     this.description = 'Usage of language quirks';
   },
 
+  /**
+   * Run every sub-test in this file.
+   * Return false if any of the tests return false
+   * @param node The node from esprima
+   * @returns {Boolean} False if a test fails. True otherwise
+   */
   test: function(node){
     var tests = [this._testUnaryNew, this._testNumericLiteralCallExpression];
     var results = _.map(tests, function(test){
