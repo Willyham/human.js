@@ -1,12 +1,17 @@
 'use strict';
 
-var argv = require('minimist')(process.argv.slice(2));
-var glob = require('glob');
+var _ = require('underscore');
+var args = require('minimist')(process.argv.slice(2));
+var glob = require('glob-all');
 var Human = require('./human');
 
-argv.d = argv.d || './';
+var directory = _.first(args._) || './';
+var allJSFiles = directory + '**/*.js';
+var excludedPattern = '!' + args.x;
 
-glob(argv.d + '**/*.js', {}, function(error, files){
+console.log(allJSFiles, excludedPattern);
+
+glob([allJSFiles, excludedPattern], {}, function(error, files){
   var human = new Human({
     files: files
   });

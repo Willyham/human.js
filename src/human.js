@@ -14,7 +14,7 @@ var AnonymousRule = require('./rules/anonymous');
 
 // RULES
 var fatalRules = [];
-var warningRules = [QuirksRule, ElseRule, AnonymousRule];
+var warningRules = [QuirksRule, ElseRule/*, AnonymousRule*/];
 var rules = ruleFactory(fatalRules, warningRules);
 
 // REPORTER
