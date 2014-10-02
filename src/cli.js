@@ -7,9 +7,7 @@ var Human = require('./human');
 
 var directory = _.first(args._) || './';
 var allJSFiles = directory + '**/*.js';
-var excludedPattern = '!' + args.x;
-
-console.log(allJSFiles, excludedPattern);
+var excludedPattern = '!' + args.exclude;
 
 glob([allJSFiles, excludedPattern], {}, function(error, files){
   var human = new Human({
