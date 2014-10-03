@@ -1,9 +1,8 @@
 // Inconsistent return type
 
 function inconsistent(){
-  var num = 42;
   if(num === 42){
-    return num;
+    return 42;
   }
   return false;
 }
@@ -20,9 +19,8 @@ function consistent(){
 // With strings
 
 function inconsistent(){
-  var str = 'rgbarg';
   if(str === 'rgbarg'){
-    return str;
+    return 'blah';
   }
   return false;
 }

@@ -15,7 +15,7 @@ var ReturnTypeRule = require('./rules/returnType');
 
 // RULES
 var fatalRules = [];
-var warningRules = [QuirksRule, ElseRule/*, AnonymousRule*/, ReturnTypeRule];
+var warningRules = [QuirksRule, ElseRule/*, AnonymousRule, ReturnTypeRule*/];
 var rules = ruleFactory(fatalRules, warningRules);
 
 // REPORTER

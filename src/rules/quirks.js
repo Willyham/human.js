@@ -50,6 +50,11 @@ var QuirksRule = Rule.extend({
     if(!node.argument || node.argument.type !== 'CallExpression'){
       return true;
     }
+
+    // Handle expressions like '!Boolean(42)'
+    if(!node.argument.callee.property){
+      return true;
+    }
     if(node.argument.callee.property.name !== 'indexOf'){
       return true;
     }

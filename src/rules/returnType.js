@@ -19,7 +19,14 @@ var ReturnType = Rule.extend({
     if(node.type !== 'FunctionDeclaration' && node.type !== 'FunctionExpression'){
       return true;
     }
-    var returnTypes = this._findReturnTypes(node.body);
+
+    // TODO: We compact return types because for now we return call expressions as null
+    var returnTypes = _.compact(this._findReturnTypes(node.body));
+
+    // If there are no returns, it's consistently undefined
+    if(!returnTypes.length){
+      return true;
+    }
     var uniqueTypes = _.unique(returnTypes);
     return _.size(uniqueTypes) === 1;
   },
@@ -33,13 +40,20 @@ var ReturnType = Rule.extend({
   _findReturnTypes: function(node){
     var returnStatements = [];
     traverse(node).forEach(function(innerNode){
-      if(innerNode && innerNode.type == 'ReturnStatement'){
+      if(!innerNode){
+        return;
+      }
+      // Don't check return types of inner functions
+      if(innerNode.type === 'FunctionDeclaration' || node.type !== 'FunctionExpression'){
+        return;
+      }
+      if(innerNode.type == 'ReturnStatement'){
         returnStatements.push(innerNode);
       }
     });
     return _.map(returnStatements, function(statement){
-      if(!statement.argument){
-        return typeof undefined;
+      if(!statement.argument || statement.argument.type !== 'Literal'){
+        return null;
       }
       return typeof statement.argument.value;
     });
