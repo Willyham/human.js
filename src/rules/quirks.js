@@ -16,7 +16,7 @@ var QuirksRule = Rule.extend({
    * @returns {Boolean} False if a test fails. True otherwise
    */
   test: function(node){
-    var tests = [this._testUnaryNew, this._testNumericLiteralCallExpression];
+    var tests = [this._testUnaryNew, this._testNumericLiteralCallExpression, this._testUnaryIndexOf];
     var results = _.map(tests, function(test){
       return test(node);
     });
@@ -38,6 +38,19 @@ var QuirksRule = Rule.extend({
       return true;
     }
     if(node.argument.type !== 'NewExpression'){
+      return true;
+    }
+    return false;
+  },
+
+  _testUnaryIndexOf: function(node){
+    if(node.type !== 'UnaryExpression'){
+      return true;
+    }
+    if(!node.argument || node.argument.type !== 'CallExpression'){
+      return true;
+    }
+    if(node.argument.callee.property.name !== 'indexOf'){
       return true;
     }
     return false;
