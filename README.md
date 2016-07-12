@@ -2,7 +2,7 @@
 
 **Ensure your JavaScript is readable by humans.**
 
-human.js lays out a set of guiding [principles](docs/principles/) for writing code which is more readable. To accompy these principles and allow you to incorporate them into your work more easily, it also provides a set of eslint rules, exported as a plugin.
+human.js lays out a set of guiding [principles](docs/principles/) for writing code which is more readable. To accompy these principles and allow you to incorporate them into your work more easily, it also provides a set of eslint [rules](docs/rules/), exported as a plugin.
 
 **NOTE**: Currently under reconstruction. I'll be adding new rules and principles as often as I can. When this becomes useful, I'll cut 1.0.0 and publish this.
 
@@ -28,6 +28,7 @@ rules.
   "rules": {
     "human/no-loops": "error",
     "human/no-else": "error",
+    "human/no-numeric-literal-calls": "error",
   }
 }
 ```
