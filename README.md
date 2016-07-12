@@ -1,24 +1,35 @@
-# testfoo
+# human.js
 
-test
+**Ensure your JavaScript is readable by humans.**
 
-## Overview
+human.js lays out a set of guiding [principles](docs/principles/) for writing code which is more readable. To accompy these principles and allow you to incorporate them into your work more easily, it also provides a set of eslint rules, exported as a plugin.
 
-TODO: Write an overview of what "testfoo" does.
-TODO: If this section is empty, please contact [Willyham](willyd@uber.com).
-
-## Installation
+## Install
 
 ```
-npm install @uber/testfoo
+$ npm install --save-dev human.js
 ```
 
 ## Usage
 
-TODO: Write a usage example for "testfoo".
-TODO: If this section is empty, please contact [Willyham](willyd@uber.com).
+The project exports an eslint plugin. You should configure your `.eslintrc` or `package.json` files to use these
+rules.
 
-## Development
+```json
+{
+  "env": {
+    "es6": true
+  },
+  "plugins": [
+    "human.js"
+  ],
+  "rules": {
+    "human/no-loops": "error"
+  }
+}
+```
 
-TODO: Write developer documentation for "testfoo".
-TODO: If this section is empty, please contact [Willyham](willyd@uber.com).
+
+## Rules
+
+- [no-loops](docs/rules/no-loops.md) - Forbid the use imperitive loop constructs.

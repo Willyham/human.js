@@ -1,3 +1,7 @@
-module.exports = testfoo;
+import noLoops from './rules/no-loops';
 
-function testfoo( ) {}
+const rules = {
+  'no-loops': noLoops
+};
+
+export default rules;
