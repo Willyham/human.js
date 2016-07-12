@@ -26,7 +26,8 @@ rules.
     "human.js"
   ],
   "rules": {
-    "human/no-loops": "error"
+    "human/no-loops": "error",
+    "human/no-else": "error",
   }
 }
 ```
