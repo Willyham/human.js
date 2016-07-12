@@ -1,7 +1,7 @@
 {
-  "name": "@uber/testfoo",
+  "name": "human.js",
   "description": "test",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Willyham <willdemaine@gmail.com>",
   "keywords": [
     "humanjs",
@@ -42,6 +42,5 @@
     "prepublish": "npm run build",
     "test": "npm run lint && npm run fast-test",
     "view-cover": "npm run cover -- --report=html && opn ./coverage/index.html"
-  },
-  "private": true
+  }
 }
