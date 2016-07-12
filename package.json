@@ -7,8 +7,8 @@
     "humanjs",
     "human.js",
     "eslint",
-    "plugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "plugin"
   ],
   "engines": {
     "node": ">= 0.10.0"

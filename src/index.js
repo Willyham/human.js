@@ -1,3 +1,3 @@
 module.exports = testfoo;
 
-function testfoo() {}
+function testfoo( ) {}
