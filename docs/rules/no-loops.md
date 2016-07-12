@@ -13,7 +13,7 @@ This rule disallows all traditional loops such as `for` and `while` loops.
 
 Avoid:
 
-```
+```js
 let results = [];
 for (let i = 0; i < myItems.length; i++) {
   results.push(doSomething(i));
@@ -22,6 +22,6 @@ for (let i = 0; i < myItems.length; i++) {
 
 Prefer:
 
-```
+```js
 const results = myItems.map(doSomething);
 ```

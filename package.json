@@ -31,16 +31,12 @@
     "changelog-major": "build-changelog --major",
     "changelog-minor": "build-changelog --minor",
     "changelog-patch": "build-changelog --patch",
-    "cover": "babel-istanbul cover dist/test/*.tap.js --report=text --report=cobertura --report=html",
-    "fast-test": "node dist/test/*.tap.js",
-    "jenkins-install": "unpm install",
-    "jenkins-jshint": "npm run lint -- --o=jshint.xml --f=checkstyle",
-    "jenkins-test": "npm run jenkins-jshint && (mkdir -p test && npm run cover | tee test/test.js.tap)",
+    "cover": "babel-istanbul cover --report=text --report=cobertura --report=html --print both tape -- `find dist/test/ -name '*.tap.js'`",
     "lint": "eslint src",
     "precommit": "npm run lint -s",
-    "prefast-test": "npm run prepublish",
     "prepublish": "npm run build",
-    "test": "npm run lint && npm run fast-test",
+    "pretest": "npm run prepublish",
+    "test": "npm run lint && npm run cover",
     "view-cover": "npm run cover -- --report=html && opn ./coverage/index.html"
   }
 }
