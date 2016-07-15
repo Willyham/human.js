@@ -29,7 +29,7 @@ rules.
     "human/no-loops": "error",
     "human/no-else": "error",
     "human/no-numeric-literal-calls": "error",
-    "human/no-plus-new": "erro"
+    "human/no-plus-new": "error"
   }
 }
 ```

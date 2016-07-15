@@ -1,4 +1,4 @@
-# no-else
+# no-plus-new
 
 ### What
 This rule disallows use of unary expressions with constructors. This is most commonly seen as `+new Date()`.

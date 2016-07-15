@@ -1,4 +1,4 @@
-# no-loops
+# no-numeric-literal-calls
 
 ### What
 This rule disallows numeric string casting through literal calls
