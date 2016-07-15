@@ -10,7 +10,7 @@ const noElse = {
         context.report({
           message,
           node: node.alternate
-        })
+        });
       }
     };
   }

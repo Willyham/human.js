@@ -11,7 +11,7 @@ const valid = () => {
     return 1;
   }
   return 2;
-}
+};
 
 const invalidCase = () => {
   if (true) {

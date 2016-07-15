@@ -7,6 +7,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "semi": ["error", "always"],
     "no-class-assign": 2,
     "no-const-assign": 2,
     "no-continue": 2,

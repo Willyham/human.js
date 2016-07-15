@@ -12,8 +12,6 @@ This rule disallows use of unary expressions with constructors. This is most com
 
 There's just no need for this. It's confusing and better methods are readily available. Performance is not a factor.
 
-*Immutability*:
-
 Avoid:
 
 ```js

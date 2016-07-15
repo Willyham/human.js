@@ -21,7 +21,7 @@ const noPlusDate = {
         context.report({
           message: genericMessage,
           node: node.argument
-        })
+        });
       }
     };
   }
