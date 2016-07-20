@@ -29,7 +29,9 @@ rules.
     "human/no-loops": "error",
     "human/no-else": "error",
     "human/no-numeric-literal-calls": "error",
-    "human/no-plus-new": "error"
+    "human/no-plus-new": "error",
+    "human/no-tilde-floor": "error",
+    "human/no-bang-bang": "error"
   }
 }
 ```
@@ -38,3 +40,8 @@ rules.
 ## Rules
 
 - [no-loops](docs/rules/no-loops.md) - Forbid the use imperitive loop constructs.
+- [no-loops](docs/rules/no-else.md) - Forbid the use of the 'else' keyword.
+- [no-loops](docs/rules/no-numeric-literal-calls.md) - Forbid the use of numeric quirks like 2..toString()
+- [no-loops](docs/rules/no-plus-new.md) - Forbid the use of +new casting.
+- [no-loops](docs/rules/no-tilde-floor.md) - Forbid the use of ~~.
+- [no-loops](docs/rules/no-bang-bang.md) - Forbid the use of !! for boolean casting
