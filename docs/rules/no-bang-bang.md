@@ -1,4 +1,4 @@
-# no-plus-new
+# no-bang-bang
 
 ### What
 This rule disallows use of the double not operator (`!!`). This is used as a shorthand to cast to boolean.
