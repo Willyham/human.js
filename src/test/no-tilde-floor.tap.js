@@ -3,7 +3,7 @@ import {RuleTester} from 'eslint';
 import noTildeFloor, {message} from '../rules/no-tilde-floor';
 
 const ruleTester = new RuleTester();
-ruleTester.run('no-plus-new', noTildeFloor, {
+ruleTester.run('no-tilde-floor', noTildeFloor, {
   valid: [{
     code: 'Math.floor(5);'
   }, {

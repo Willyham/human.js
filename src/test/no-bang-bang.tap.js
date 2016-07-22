@@ -3,7 +3,7 @@ import {RuleTester} from 'eslint';
 import noBangBang, {message} from '../rules/no-bang-bang';
 
 const ruleTester = new RuleTester();
-ruleTester.run('no-loops', noBangBang, {
+ruleTester.run('no-bang-bang', noBangBang, {
   valid: [{
     code: 'Boolean(x)'
   }, {

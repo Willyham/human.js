@@ -31,6 +31,7 @@ rules.
     "human/no-numeric-literal-calls": "error",
     "human/no-plus-new": "error",
     "human/no-tilde-floor": "error",
+    "human/no-unary-index-of": "error",
     "human/no-bang-bang": "error"
   }
 }
@@ -40,8 +41,9 @@ rules.
 ## Rules
 
 - [no-loops](docs/rules/no-loops.md) - Forbid the use imperitive loop constructs.
-- [no-loops](docs/rules/no-else.md) - Forbid the use of the 'else' keyword.
-- [no-loops](docs/rules/no-numeric-literal-calls.md) - Forbid the use of numeric quirks like 2..toString()
-- [no-loops](docs/rules/no-plus-new.md) - Forbid the use of +new casting.
-- [no-loops](docs/rules/no-tilde-floor.md) - Forbid the use of ~~.
-- [no-loops](docs/rules/no-bang-bang.md) - Forbid the use of !! for boolean casting
+- [no-else](docs/rules/no-else.md) - Forbid the use of the 'else' keyword.
+- [no-numeric-literal-calls](docs/rules/no-numeric-literal-calls.md) - Forbid the use of numeric quirks like 2..toString()
+- [no-tilde-floor](docs/rules/no-tilde-floor.md) - Forbid the use of ~~.
+- [no-unary-index-of](docs/rules/no-unary-index-of.md) - Forbid the use of ~ for testing membership.
+- [no-plus-new](docs/rules/no-plus-new.md) - Forbid the use of +new casting.
+- [no-bang-bang](docs/rules/no-bang-bang.md) - Forbid the use of !! for boolean casting
